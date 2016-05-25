@@ -1,0 +1,200 @@
+<openerp>
+    <data>
+        <!--- acciones-->
+        <record model="ir.actions.act_window" id="jugadores">
+            <field name="name">jugadores</field>
+            <field name="res_model">modulo_partidos.jugador</field>
+        </record>
+
+        <!--<record model="ir.actions.act_window" id="partidos">
+            <field name="name">partidos</field>
+            <field name="res_model">modulo_partidos.partido</field>
+        </record>-->
+
+        <record model="ir.actions.act_window" id="equipo">
+            <field name="name">equipo</field>
+            <field name="res_model">modulo_partidos.equipo</field>
+        </record>
+
+       <!-- <record model="ir.actions.act_window" id="entrenador">
+            <field name="name">entrenador</field>
+            <field name="res_model">modulo_partidos.entrenador</field>
+        </record>-->
+
+         <!--- MENUS-->
+        <menuitem name="GESTION EQUIPO" id="equipo1" sequence="10"/>
+        <!--- MENU morado-->
+        <menuitem name="Equipo" id="equipos_equipo2" parent="equipo1" sequence="10"/>
+        <!--- menu menus-->
+        <menuitem name="Jugadores" id="menu_jugadores" parent="equipos_equipo2" action="jugadores"/>
+        <!-- <menuitem name="Partidos" id="menu_partidos" parent="equipos_equipo2" action="partidos"/>-->
+        <menuitem name="Equipo" id="menu_equipo" parent="equipos_equipo2" action="equipo"/>
+        <!-- <menuitem name="Entrenador" id="menu_entrenador" parent="equipos_equipo2" action="entrenador"/>-->
+
+         <!--- EQUIPO-->
+
+        <!---EQUIPO TREE-->
+        <record  model="ir.ui.view" id="equipo_tree_view">
+            <field name="name">modulo_partidos.equipo.tree</field>
+            <field name="model">modulo_partidos.equipo</field>
+            <field name="type">tree</field>
+            <field name="arch"  type="xml">
+                <tree string="equipo">
+                   <field name="name"/>
+                   <field name="presupuesto"/>
+                   <field name="anio_fundacion"/>
+                    <field name="jugador"/> 
+                   <!--<field name="entrenador"/> -->
+                </tree>
+            </field>
+        </record>
+
+        <!---EQUIPO FORM-->
+        <record model="ir.ui.view" id="equipo_form_view">
+            <field name="name">modulo_partidos.equipo.form</field>
+            <field name="model">modulo_partidos.equipo</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="equipo">
+                    <group>
+                        <field name="name"/>
+                        <field name="presupuesto"/>
+                        <field name="anio_fundacion"/>
+                        <field name="jugador" widget="many2many" options="{'no_create':True}"/> 
+                       <!-- <field name="entrenador" widget="many2many" options="{'no_create':True}"/> -->
+                    </group>
+                </form>
+            </field>
+        </record>
+
+         <!--- JUGADOR-->
+
+        <!---JUGADOR TREE-->
+        <record  model="ir.ui.view" id="jugador_tree_view">
+            <field name="name">modulo_partidos.jugador.tree</field>
+            <field name="model">modulo_partidos.jugador</field>
+            <field name="type">tree</field>
+            <field name="arch"  type="xml">
+                <tree string="jugador">
+                   <field name="name"/>
+                   <field name="posicion"/>
+                   <field name="numero"/>
+                   <field name="edad"/>
+                </tree>
+            </field>
+        </record>
+
+        <!---JUGADOR FORM-->
+        <record model="ir.ui.view" id="jugador_form_view">
+            <field name="name">modulo_partidos.jugador.form</field>
+            <field name="model">modulo_partidos.jugador</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="jugador">
+                    <group>
+                        <field name="name"/>
+                        <field name="posicion"/>
+                        <field name="numero"/>
+                        <field name="edad"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!---ENTRENADOR-->
+
+        <!---ENTRENADOR TREE-->
+        <!---<record  model="ir.ui.view" id="entrenador_tree_view">
+            <field name="name">modulo_partidos.entrenador.tree</field>
+            <field name="model">modulo_partidos.entrenador</field>
+            <field name="type">tree</field>
+            <field name="arch"  type="xml">
+                <tree string="entrenador">
+                   <field name="edad"/>
+                   <field name="partidosGanados"/>
+                   <field name="partidosPerdido"/>
+                  <field name="equipo"/>
+                </tree>
+            </field>
+        </record>-->
+
+        <!---ENTRENADOR FORM-->
+        <!--<record model="ir.ui.view" id="entrenador_form_view">
+            <field name="name">modulo_partidos.entrenador.form</field>
+            <field name="model">modulo_partidos.entrenador</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="entrenador">
+                    <group>
+                        <field name="edad"/>
+                        <field name="partidosGanados"/>
+                        <field name="partidosPerdido"/>
+                      <field name="equipo" widget="many2many" options="{'no_create':True}"/> 
+                    </group>
+                </form>
+            </field>
+        </record>-->
+
+         <!---PARTIDO-->
+
+        <!---PARTIDO TREE-->
+        <!--<record  model="ir.ui.view" id="partido_tree_view">
+            <field name="name">modulo_partidos.partido.tree</field>
+            <field name="model">modulo_partidos.partido</field>
+            <field name="type">tree</field>
+            <field name="arch"  type="xml">
+                <tree string="partido">
+                	<notebook>
+						<page string="Ganados">
+							<t t-foreach="docs" t-as="objeto">
+								<t t-if="objeto.resultado=="Victoria">
+									<field name="rival"/>
+	                    			<field name="fecha"/>
+	                    			<field name="resultado"/>
+	                    			<field name="lugar"/>
+	                    		</t>
+							</t>
+						</page>
+						<page string="Empatados">	
+							<t t-foreach="docs" t-as="objeto">
+								<t t-if="objeto.resultado=="Empate">
+									<field name="rival"/>
+	                    			<field name="fecha"/>
+	                    			<field name="resultado"/>
+	                    			<field name="lugar"/>
+	                    		</t>
+							</t>
+						</page>
+						<page string="Perdidos">
+							<t t-foreach="docs" t-as="objeto">
+								<t t-if="objeto.resultado=="Derrota">
+									<field name="rival"/>
+	                    			<field name="fecha"/>
+	                    			<field name="resultado"/>
+	                    			<field name="lugar"/>
+	                    		</t>
+							</t>
+						</page>
+                	</notebook>
+                </tree>
+            </field>
+        </record>-->
+
+        <!---PARTIDO FORM-->
+        <!--<record model="ir.ui.view" id="entrenador_form_view">
+            <field name="name">modulo_partidos.partido.form</field>
+            <field name="model">modulo_partidos.partido</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="partido">
+                    <group>
+                        <field name="rival" widget="many2many" options="{'no_create':True}"/>
+                        <field name="fecha"/>
+                        <field name="resultado"/> 
+                        <field name="lugar"/> 
+                    </group>
+                </form>
+            </field>
+        </record>-->
+    </data>
+</openerp>

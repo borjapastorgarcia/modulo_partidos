@@ -1,0 +1,307 @@
+<openerp>
+	<data>
+		<!------------------------------------ENTRENADORES.-------------------------------------------->
+
+			<record model="modulo_partidos.entrenador" id="E1">
+			<field name="name">as</field>
+			<field name="edad">21</field>
+			<field name="partidosGanados">5</field>
+			<field name="partidosPerdidos">5</field>
+			<field name="equipo" ref="EQ1"/>
+		</record>
+		<record model="modulo_partidos.entrenador" id="E2">
+			<field name="name">as</field>
+			<field name="edad">21</field>
+			<field name="partidosGanados">5</field>
+			<field name="partidosPerdidos">5</field>
+			<field name="equipo" ref="EQ2"/>
+		</record>
+		<record model="modulo_partidos.entrenador" id="E3">
+			<field name="name">ass</field>
+			<field name="edad">21</field>
+			<field name="partidosGanados">5</field>
+			<field name="partidosPerdidos">5</field>
+			<field name="equipo" ref="EQ3"/>
+		</record>
+		<record model="modulo_partidos.entrenador" id="E4">
+			<field name="name">asd</field>
+			<field name="edad">21</field>
+			<field name="partidosGanados">5</field>
+			<field name="partidosPerdidos">5</field>
+			<field name="equipo" ref="EQ4"/>
+		</record>
+		<record model="modulo_partidos.entrenador" id="E5">
+			<field name="name">asf</field>
+			<field name="edad">21</field>
+			<field name="partidosGanados">5</field>
+			<field name="partidosPerdidos">5</field>
+			<field name="equipo" ref="EQ5"/>
+		</record>
+		<record model="modulo_partidos.entrenador" id="E6">
+			<field name="name">asg</field>
+			<field name="edad">21</field>
+			<field name="partidosGanados">5</field>
+			<field name="partidosPerdidos">5</field>
+			<field name="equipo" ref="EQ6"/>
+		</record>
+		<record model="modulo_partidos.entrenador" id="E7">
+			<field name="name">ash</field>
+			<field name="edad">21</field>
+			<field name="partidosGanados">5</field>
+			<field name="partidosPerdidos">5</field>
+			<field name="equipo" ref="EQ7"/>
+		</record>
+		<record model="modulo_partidos.entrenador" id="E8">
+			<field name="name">asj</field>
+			<field name="edad">21</field>
+			<field name="partidosGanados">5</field>
+			<field name="partidosPerdidos">5</field>
+			<field name="equipo" ref="EQ8"/>
+		</record>
+		<record model="modulo_partidos.entrenador" id="E9">
+			<field name="name">ask</field>
+			<field name="edad">21</field>
+			<field name="partidosGanados">5</field>
+			<field name="partidosPerdidos">5</field>
+			<field name="equipo" ref="EQ9"/>
+		</record>
+		<record model="modulo_partidos.entrenador" id="E10">
+			<field name="name">asl</field>
+			<field name="edad">21</field>
+			<field name="partidosGanados">5</field>
+			<field name="partidosPerdidos">5</field>
+			<field name="equipo" ref="EQ10"/>
+		</record>
+
+
+
+		<!------------------------------------EQUIPOS.-------------------------------------------->
+		
+
+
+		<record model="modulo_partidos.equipo" id="EQ1">
+			<field name="name">barcelona</field>
+			<field name="presupuesto">100000</field>
+			<field name="anio_fundacion">1901</field>
+		</record>
+		<record model="modulo_partidos.equipo" id="EQ2">
+			<field name="name">madrid</field>
+			<field name="presupuesto">100000</field>
+			<field name="anio_fundacion">1901</field>
+		</record>
+		<record model="modulo_partidos.equipo" id="EQ3">
+			<field name="name">atletico</field>
+			<field name="presupuesto">100000</field>
+			<field name="anio_fundacion">1901</field>
+		</record>
+		<record model="modulo_partidos.equipo" id="EQ4">
+			<field name="name">mirandes</field>
+			<field name="presupuesto">100000</field>
+			<field name="anio_fundacion">1901</field>
+		</record>
+		<record model="modulo_partidos.equipo" id="EQ5">
+			<field name="name">alaves</field>
+			<field name="presupuesto">100000</field>
+			<field name="anio_fundacion">1901</field>
+		</record>
+		<record model="modulo_partidos.equipo" id="EQ6">
+			<field name="name">athletic</field>
+			<field name="presupuesto">100000</field>
+			<field name="anio_fundacion">1901</field>
+		</record>
+		<record model="modulo_partidos.equipo" id="EQ7">
+			<field name="name">malaga</field>
+			<field name="presupuesto">100000</field>
+			<field name="anio_fundacion">1901</field>
+		</record>
+		<record model="modulo_partidos.equipo" id="EQ8">
+			<field name="name">sevilla</field>
+			<field name="presupuesto">100000</field>
+			<field name="anio_fundacion">1901</field>
+		</record>
+		<record model="modulo_partidos.equipo" id="EQ9">
+			<field name="name">sporting</field>
+			<field name="presupuesto">100000</field>
+			<field name="anio_fundacion">1901</field>
+		</record>
+		<record model="modulo_partidos.equipo" id="EQ10">
+			<field name="name">milan</field>
+			<field name="presupuesto">100000</field>
+			<field name="anio_fundacion">1901</field>
+		</record>
+
+
+
+		<!------------------------------------JUGADORES.-------------------------------------------->
+		
+
+		<record model="modulo_partidos.jugador" id="j1">
+			<field name="name">xx</field>
+			<field name="posicion">Defensa</field>
+			<field name="numero">1</field>
+			<field name="edad">22</field>
+			<field name="equipo" ref="EQ1"/>
+		</record>
+		<record model="modulo_partidos.jugador" id="j2">
+			<field name="name">zx</field>
+			<field name="posicion">Portero</field>
+			<field name="numero">3</field>
+			<field name="edad">22</field>
+			<field name="equipo" ref="EQ2"/>
+		</record>
+		<record model="modulo_partidos.jugador" id="j3">
+			<field name="name">xxc</field>
+			<field name="posicion">Defensa</field>
+			<field name="numero">4</field>
+			<field name="edad">22</field>
+			<field name="equipo" ref="EQ3"/>
+		</record>
+		<record model="modulo_partidos.jugador" id="j4">
+			<field name="name">xxv</field>
+			<field name="posicion">Centrocampista</field>
+			<field name="numero">3</field>
+			<field name="edad">22</field>
+			<field name="equipo" ref="EQ4"/>
+		</record>
+		<record model="modulo_partidos.jugador" id="j5">
+			<field name="name">xxb</field>
+			<field name="posicion">Delantero</field>
+			<field name="numero">5</field>
+			<field name="edad">22</field>
+			<field name="equipo" ref="EQ5"/>
+		</record>
+		<record model="modulo_partidos.jugador" id="j6">
+			<field name="name">xxn</field>
+			<field name="posicion">Defensa</field>
+			<field name="numero">6</field>
+			<field name="edad">22</field>
+			<field name="equipo" ref="EQ6"/>
+		</record>
+		<record model="modulo_partidos.jugador" id="j7">
+			<field name="name">xxm</field>
+			<field name="posicion">Defensa</field>
+			<field name="numero">7</field>
+			<field name="edad">22</field>
+			<field name="equipo" ref="EQ7"/>
+		</record>
+		<record model="modulo_partidos.jugador" id="j8">
+			<field name="name">xxa</field>
+			<field name="posicion">Centrocampista</field>
+			<field name="numero">8</field>
+			<field name="edad">22</field>
+			<field name="equipo" ref="EQ8"/>
+		</record>
+		<record model="modulo_partidos.jugador" id="j9">
+			<field name="name">xxs</field>
+			<field name="posicion">Defensa</field>
+			<field name="numero">9</field>
+			<field name="edad">22</field>
+			<field name="equipo" ref="EQ9"/>
+		</record>
+		<record model="modulo_partidos.jugador" id="j10">
+			<field name="name">xxd</field>
+			<field name="posicion">Delantero</field>
+			<field name="numero">10</field>
+			<field name="edad">22</field>
+			<field name="equipo" ref="EQ10"/>
+		</record>
+		<record model="modulo_partidos.jugador" id="j11">
+			<field name="name">xxf</field>
+			<field name="posicion">Defensa</field>
+			<field name="numero">11</field>
+			<field name="edad">22</field>
+			<field name="equipo" ref="EQ1"/>
+		</record>
+		<record model="modulo_partidos.jugador" id="j12">
+			<field name="name">xxg</field>
+			<field name="posicion">Defensa</field>
+			<field name="numero">12</field>
+			<field name="edad">22</field>
+			<field name="equipo" ref="EQ2"/>
+		</record>
+		<record model="modulo_partidos.jugador" id="j13">
+			<field name="name">xxh</field>
+			<field name="posicion">Delantero</field>
+			<field name="numero">13</field>
+			<field name="edad">22</field>
+			<field name="equipo" ref="EQ3"/>
+		</record>
+		<record model="modulo_partidos.jugador" id="j14">
+			<field name="name">xxj</field>
+			<field name="posicion">Defensa</field>
+			<field name="numero">14</field>
+			<field name="edad">22</field>
+			<field name="equipo" ref="EQ4"/>
+		</record>
+		<record model="modulo_partidos.jugador" id="j15">
+			<field name="name">xxkj</field>
+			<field name="posicion">Portero</field>
+			<field name="numero">15</field>
+			<field name="edad">22</field>
+			<field name="equipo" ref="EQ5"/>
+		</record>
+
+		<!------------------------------------PARTIDOS.-------------------------------------------->
+		
+		<record model="modulo_partidos.partido" id="p1">
+			<field name="rival" ref="EQ1"/>
+			<field name="fecha"></field>
+			<field name="resultado">Victoria</field>
+			<field name="lugar">22</field>
+		</record>
+		<record model="modulo_partidos.partido" id="p2">
+			<field name="rival" ref="EQ2"/>
+			<field name="fecha"></field>
+			<field name="resultado">Empate</field>
+			<field name="lugar">22</field>
+		</record>
+		<record model="modulo_partidos.partido" id="p3">
+			<field name="rival" ref="EQ3"/>
+			<field name="fecha"></field>
+			<field name="resultado">Victoria</field>
+			<field name="lugar">22</field>
+		</record>
+		<record model="modulo_partidos.partido" id="p4">
+			<field name="rival" ref="EQ4"/>
+			<field name="fecha"></field>
+			<field name="resultado">Empate</field>
+			<field name="lugar">22</field>
+		</record>
+		<record model="modulo_partidos.partido" id="p5">
+			<field name="rival" ref="EQ5"/>
+			<field name="fecha"></field>
+			<field name="resultado">Victoria</field>
+			<field name="lugar">22</field>
+		</record>
+		<record model="modulo_partidos.partido" id="p6">
+			<field name="rival" ref="EQ6"/>
+			<field name="fecha"></field>
+			<field name="resultado">Derrota</field>
+			<field name="lugar">22</field>
+		</record>
+		<record model="modulo_partidos.partido" id="p7">
+			<field name="rival" ref="EQ7"/>
+			<field name="fecha"></field>
+			<field name="resultado">Victoria</field>
+			<field name="lugar">22</field>
+		</record>
+		<record model="modulo_partidos.partido" id="p8">
+			<field name="rival" ref="EQ8"/>
+			<field name="fecha"></field>
+			<field name="resultado">Victoria</field>
+			<field name="lugar">22</field>
+		</record>
+		<record model="modulo_partidos.partido" id="p9">
+			<field name="rival" ref="EQ9"/>
+			<field name="fecha"></field>
+			<field name="resultado">Victoria</field>
+			<field name="lugar">22</field>
+		</record>
+		<record model="modulo_partidos.partido" id="p10">
+			<field name="rival" ref="EQ10"/>
+			<field name="fecha"></field>
+			<field name="resultado">Victoria</field>
+			<field name="lugar">22</field>
+		</record>
+	</data>
+</openerp>

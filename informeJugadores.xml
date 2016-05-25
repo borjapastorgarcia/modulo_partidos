@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+	<template id="jugadoresID">
+	<!--Llamada al generador de informes.-->
+		 <t t-call="report.html_container">
+		<!--Definición Estructura del Informe- La vista. Se puede cambiar-->
+			 <div class="page">
+				 <div class="row">
+				 	<h3>Todos los jugadores disponibles</h3>
+				 </div>
+				 <t t-foreach="docs" t-as="objeto">
+				 	<p>Nombre: <span t-field="objeto.name"/></p>
+					<p>Posicion: <span t-field="objeto.posicion"/></p>
+					<p>Numero: <span t-field="objeto.numero"/></p>
+					<p>Edad: <span t-field="objeto.edad"/></p>
+					<p>Equipo: <span t-field="objeto.equipo.name"/></p>
+				 </t>
+			</div>
+		 </t>
+	</template>
+	</data>
+</openerp>

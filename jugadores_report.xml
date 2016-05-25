@@ -1,0 +1,21 @@
+<openerp>
+	<data>
+	 <!-- Un registro record por cada informe del módulo -->
+	<report
+		id="informe_jugadores"
+		model="modulo_partidos.jugador"
+		string="LISTADO JUGADORES"
+		report_type="qweb-pdf"
+		name="modulo_partidos.jugadoresID" 
+		attachment_use="False"
+		file="modulo_partidos"/>
+	<report
+		id="informe_jugadores"
+		model="modulo_partidos.jugador"
+		string="LISTADO DELANTEROS"
+		report_type="qweb-pdf"
+		name="modulo_partidos.delanterosID" 
+		attachment_use="False"
+		file="modulo_partidos"/>
+	</data>
+</openerp>
